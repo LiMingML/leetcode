@@ -53,7 +53,6 @@ class Solution:
 
 class Solution2:
     def findTargetSumWays(self, nums: List[int], target: int) -> int:
-        # TODO
         s = sum(nums)
         # If `s` is odd, `target` must be odd.
         # If there are even odd or even numbers, the result must be even number.
