@@ -30,9 +30,9 @@ class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
         nums_set = set(nums)
         if len(nums_set) == len(nums):
-            return True
+            return False
 
-        return False
+        return True
 
 
 if __name__ == '__main__':

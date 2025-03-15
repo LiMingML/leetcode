@@ -49,6 +49,7 @@ class RandomizedSet:
         Initialize your data structure here.
         """
         self.array = []
+        # This map is used to get the index in array in O(1) time.
         self.dictionary = {}
 
     def insert(self, val: int) -> bool:
@@ -98,9 +99,11 @@ class RandomizedSet:
 # param_3 = obj.getRandom()
 if __name__ == '__main__':
     obj = RandomizedSet()
-    print(obj.remove(0))
-    print(obj.remove(0))
-    print(obj.insert(0))
+    print(obj.insert(1))
+    print(obj.remove(2))
+    print(obj.insert(2))
     print(obj.getRandom())
-    print(obj.remove(0))
-    print(obj.insert(0))
+    print(obj.remove(1))
+    print(obj.insert(2))
+    print(obj.getRandom())
+

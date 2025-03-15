@@ -57,7 +57,7 @@ class Solution:
         used = {}
         max_length = start = 0
         for i, char in enumerate(s):
-            if char in used and start <= used[char]:
+            if char in used and used[char] >= start:
                 start = used[char] + 1
             else:
                 max_length = max(max_length, i - start + 1)

@@ -181,7 +181,7 @@ class Solution:
         node_hash = f'{node.val}-{left}-{right}'
 
         d[node_hash].append(node)
-        if len(d[node_hash]) ==2:
+        if len(d[node_hash]) == 2:
             dup.append(d[node_hash][0])
 
         return node_hash
