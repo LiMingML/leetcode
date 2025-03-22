@@ -31,26 +31,22 @@ class TreeNode:
 
 class Solution:
     def hasPathSum(self, root: TreeNode, targetSum: int) -> bool:
-        if root is None:
-            return None
-
-        left_sum = self.hasPathSum(root.left, targetSum - root.val)
-        right_sum = self.hasPathSum(root.right, targetSum - root.val)
-
-        if left_sum is None and right_sum is None:
-            return targetSum == root.val
-        else:
-            return bool(left_sum or right_sum)
+        if not root:
+            return False
+        if root.val == targetSum and not root.left and not root.right:
+            return True
+        return (self.hasPathSum(root.left, targetSum - root.val) or
+                self.hasPathSum(root.right, targetSum - root.val))
 
 
 if __name__ == '__main__':
     root = TreeNode(1)
     node2 = TreeNode(2)
-    node3 = TreeNode(3)
+    # node3 = TreeNode(3)
 
     root.left = node2
-    node2.left = node3
+    # node2.left = node3
 
     sol = Solution()
-    result = sol.hasPathSum(root, 6)
+    result = sol.hasPathSum(root, 1)
     print(result)

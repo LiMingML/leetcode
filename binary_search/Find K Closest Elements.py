@@ -36,7 +36,7 @@ class Solution:
 
         while low < high:
             mid = (low + high) // 2
-
+            # 数学定义
             if (arr[mid] - x) >= (x - arr[mid - k]):
                 high = mid
             else:

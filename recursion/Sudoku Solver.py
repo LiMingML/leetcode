@@ -51,6 +51,7 @@ from typing import List
 
 
 class Solution:
+    # TODO: 提高算法的效率，要从空缺早少的地方开始
     def solveSudoku(self, board: List[List[str]]) -> None:
         """
         Do not return anything, modify board in-place instead.

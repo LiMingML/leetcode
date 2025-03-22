@@ -48,7 +48,7 @@ class TreeNode:
 class Solution:
     def preorderTraversal(self, root: TreeNode) -> List[int]:
         # base case
-        if root:
+        if not root:
             return []
 
         lst = list()

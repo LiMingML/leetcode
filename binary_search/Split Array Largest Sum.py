@@ -35,6 +35,7 @@ from typing import List
 
 class Solution:
     def splitArray(self, nums: List[int], k: int) -> int:
+        # TODO: 添加注释
         def check(mid):
             """
             To check if mid can be maximum subarray sum.

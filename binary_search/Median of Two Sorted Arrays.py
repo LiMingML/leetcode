@@ -45,6 +45,13 @@ from typing import List
 class Solution:
     def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
         def find_kth(nums1, nums2, k):
+            """
+            在有序数组nums1和nums2中，查找第k个值。
+            :param nums1:
+            :param nums2:
+            :param k: 第k个值
+            :return:
+            """
             # Base case
             if not nums1:
                 return nums2[k - 1]
@@ -72,8 +79,7 @@ if __name__ == '__main__':
     nums1 = [1, 2]
     nums2 = [3, 4]
 
-    nums1 = [1]
-    nums2 = []
+
 
     median = solution.findMedianSortedArrays(nums1, nums2)
     print(median)

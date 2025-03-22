@@ -46,6 +46,7 @@ class Solution:
         left, right = 1, len(nums) - 1
         while left < right:
             mid = (left + right) // 2
+            # 利用了 [1,n] 和只有一个重复数字的特性。
             count = 0
             for num in nums:
                 if num <= mid:
